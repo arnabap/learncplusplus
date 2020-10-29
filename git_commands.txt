@@ -1,0 +1,7 @@
+git pull https://github.com/arnabap/learncplusplus master
+
+quit vi with saved contents:- 
+:wq<return>
+
+quit vi without saved contents
+:q<return>
