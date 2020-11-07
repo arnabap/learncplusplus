@@ -207,29 +207,128 @@
 //Read integers using cin. Ex: If NUM_GUESSES is 3 and user enters 9 5 2, then userGuesses is {9, 5, 2}.
 ////////////////////////////////////////////////////////////////
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//    const int NUM_GUESSES = 3;
+//    vector<int> userGuesses(NUM_GUESSES);
+//    unsigned int i;
+//    //bool verify= false;
+
+//   for (i = 0; i < userGuesses.size(); ++i) {
+//       cin >> userGuesses.at(i);
+//    }
+//   cout << "{";
+//    for (i = 0; i < userGuesses.size(); ++i) {
+      
+//       if(i != 0){
+//               cout << ",";
+//               }              
+            
+//        cout << userGuesses.at(i);
+//    }
+//   cout << "}"<<endl;
+
+//    return 0;
+// }
+
+////////////////////////////////////////////////////////////////
+
+//Write a program to input course grades from user and print them in
+//a line and in reverse
+////////////////////////////////////////////////////////////////
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//    const int NUM_VALS = 4;
+//    vector<int> courseGrades(NUM_VALS);
+//    int i;
+
+//    for (i = 0; i < courseGrades.size(); ++i) {
+//       cin >> courseGrades.at(i);
+//    }
+
+//    /* Your solution goes here  */
+//    for (i = 0; i < (int) courseGrades.size(); ++i) {
+//    cout << courseGrades.at(i) << " " ;
+// }
+// cout << endl;
+
+// for (i = courseGrades.size() - 1; i >= 0; --i) {
+//    cout << courseGrades.at(i) << " " ;
+// }
+// cout << endl;
+
+//    return 0;
+// }
+
+////////////////////////////////////////////////////////////////
+
+// Vector testGrades contains NUM_VALS test scores. Write a for loop that sets 
+// sumExtra to the total extra credit received. Full credit is 100, so anything over 100 is extra credit. 
+// Ex: If testGrades = {101, 83, 107, 90}, then sumExtra = 8, because 1 + 0 + 7 + 0 is 8.
+
+////////////////////////////////////////////////////////////////
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//    const int NUM_VALS = 4;
+//    vector<int> testGrades(NUM_VALS);
+//    unsigned int i;
+//    int sumExtra=0;
+//    int Extra = 0; 
+
+//    for (i = 0; i < testGrades.size(); ++i) {
+//       cin >> testGrades.at(i);
+//    }
+
+//    for (i = 0; i < testGrades.size(); ++i) {
+//       if(testGrades.at(i)>100){
+//          Extra=testGrades.at(i)-100;
+//          sumExtra=sumExtra+Extra;
+//       }
+//    }
+
+//    cout << "sumExtra: " << sumExtra << endl;
+//    return 0;
+// }
+
+// ////////////////////////////////////////////////////////////////
+
+// Write a for loop to print all NUM_VALS elements of vector hourlyTemp. 
+// Separate elements with a comma and space. Ex: If hourlyTemp = {90, 92, 94, 95}, 
+// print:
+// 90, 92, 94, 95
+// ////////////////////////////////////////////////////////////////
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
 int main() {
-   const int NUM_GUESSES = 3;
-   vector<int> userGuesses(NUM_GUESSES);
+   const int NUM_VALS = 4;
    unsigned int i;
-   //bool verify= false;
+   vector<int> hourlyTemp(NUM_VALS);
 
-  for (i = 0; i < userGuesses.size(); ++i) {
-      cin >> userGuesses.at(i);
+   for (i = 0; i < hourlyTemp.size(); ++i) {
+      cin >> hourlyTemp.at(i);
    }
-  cout << "{";
-   for (i = 0; i < userGuesses.size(); ++i) {
-      
-      if(i != 0){
-              cout << ",";
-              }              
-            
-       cout << userGuesses.at(i);
+
+
+for (i = 0; i < hourlyTemp.size(); ++i) {
+   if (i != 0) { // Not first, so include separating comma and space
+      cout << ", ";
    }
-  cout << "}"<<endl;
+   cout << hourlyTemp.at(i);
+}
+   cout << endl;
 
    return 0;
 }
